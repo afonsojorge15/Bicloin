@@ -1,0 +1,23 @@
+# viagem do Cais do Sodré para a Gulbenkian, de bicicleta e metro
+ping
+balance
+top-up 21
+# não é possível, carregar com menos
+top-up 15
+info ciis
+info cais
+move 38.7060 -9.1441
+bike-up cais
+balance
+# pedalar até à Gulbenkian
+zzz 3000
+move 38.7376 -9.1545
+bike-down gulb
+# não é possível, continuar a pedalar até à estação mais próxima
+scan 2
+move 38.7369 -9.1366
+bike-down ista
+balance
+# ir de metro até à Gulbenkian
+zzz 3500
+move 38.7060 -9.1441

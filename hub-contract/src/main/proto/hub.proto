@@ -1,0 +1,107 @@
+//
+// Protocol buffers definition
+//
+syntax = "proto3";
+package pt.tecnico.bicloin.hub.grpc;
+
+message PingRequest {
+  string input = 1;
+}
+
+message PingResponse {
+	string output = 1;
+}
+
+message BalanceRequest {
+  string user_name = 1;
+}
+
+message BalanceResponse {
+  int32 balance = 1;
+}
+
+message TopUpRequest {
+  string user_name = 1;
+  int32 amount = 2;
+  string phone_number = 3;
+}
+
+message TopUpResponse {
+  int32 balance = 1;
+}
+
+message InfoStationRequest {
+  string station_id = 1;
+}
+
+message InfoStationResponse {
+  string name = 1;
+  double lat = 2;
+  double lon = 3;
+  int32 docks = 4;
+  int32 award = 5;
+  int32 bike_count = 6;
+  int32 total_lifts = 7;
+  int32 total_deliveries = 8;
+}
+
+message LocateStationRequest {
+  double lat = 1;
+  double lon = 2;
+  int32 limiter = 3;
+}
+
+message LocateStationResponse {
+  repeated string stations = 1;
+}
+
+message BikeUpRequest {
+  string user_name = 1;
+  double lat = 2;
+  double lon = 3;
+  string station_id = 4;
+}
+
+message BikeUpResponse {
+}
+
+message BikeDownRequest {
+  string user_name = 1;
+  double lat = 2;
+  double lon = 3;
+  string station_id = 4;
+}
+
+message BikeDownResponse {
+}
+
+message HaversineDistanceRequest {
+  double lat1 = 1;
+  double lon1 = 2;
+  double lat2 = 3;
+  double lon2 = 4;
+}
+
+message HaversineDistanceResponse {
+  double distance = 1;
+}
+
+message SysStatusRequest {
+  repeated string targets = 1;
+}
+
+message SysStatusResponse {
+  string output = 1;
+}
+
+service HubService {
+  rpc balance(BalanceRequest) returns (BalanceResponse);
+  rpc top_up(TopUpRequest) returns (TopUpResponse);
+  rpc info_station(InfoStationRequest) returns (InfoStationResponse);
+  rpc locate_station(LocateStationRequest) returns (LocateStationResponse);
+  rpc bike_up(BikeUpRequest) returns (BikeUpResponse);
+  rpc bike_down(BikeDownRequest) returns (BikeDownResponse);
+  rpc haversine_distance(HaversineDistanceRequest) returns (HaversineDistanceResponse);
+  rpc ping(PingRequest) returns (PingResponse);
+  rpc sys_status(SysStatusRequest) returns (SysStatusResponse);
+}
