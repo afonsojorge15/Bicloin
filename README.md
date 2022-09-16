@@ -1,7 +1,8 @@
 # T03-Bicloin
 
-Distributed Systems 2020-2021, 2nd semester project
+Distributed Systems Final Project - 2020-2021, 2nd semester 
 
+=> Translation regarding document not in english is avaiable upon request 
 
 ## Authors
 
