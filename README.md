@@ -2,7 +2,7 @@
 
 Distributed Systems Final Project - 2020-2021, 2nd semester 
 
-=> Translation regarding document not in english is avaiable upon request 
+=> Translation regarding non-english documents is avaiable upon request 
 
 ## Authors
 
