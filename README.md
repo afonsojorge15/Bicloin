@@ -24,7 +24,7 @@ Sara Ferreira [93756](sara.c.ferreira@tecnico.ulisboa.pt)
 | core     | protocol buffers; project structure | _(whole team)_      |
 | T1       | rec: read, write; hub-tester        | _Sara Ferreira_     |
 | T2       | hub; rec-tester                     | _Guilherme Saraiva_ |
-| T3       | info_station; app                   | _Afonso Jorge_      |
+| T3       | hub; app                            | _Afonso Jorge_      |
 
 
 ### Code identification
